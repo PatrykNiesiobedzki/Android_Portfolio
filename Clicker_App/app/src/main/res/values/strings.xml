@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Clicker</string>
+    <string name="tap_me">TAP ME</string>
+    <string name="score">Score: %1$d</string>
+    <string name="time_left">Time Left: %1$d</string>
+    <string name="gameOver">Times up. Your Score: %1$d</string>
+    <string name="about">About</string>
+    <string name="aboutTitle">Clicker</string>
+    <string name="aboutMessage">Created by Patryś</string>
+
+</resources>
