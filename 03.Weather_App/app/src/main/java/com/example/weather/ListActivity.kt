@@ -28,7 +28,7 @@ class ListActivity : AppCompatActivity() {
                 val forecastsString = mutableListOf<String>()
                 if (forecasts !=null){
                     for (forecastem in forecasts){
-                        val newString = "Data: ${forecastem.timestamp_local} || Temp: ${forecastem.temp}C || Cloudy ${forecastem.clouds}%"
+                        val newString = "Temp: ${forecastem.temp}C || Cloudy ${forecastem.clouds}%"
                         forecastsString.add(newString)
                     }
                 }

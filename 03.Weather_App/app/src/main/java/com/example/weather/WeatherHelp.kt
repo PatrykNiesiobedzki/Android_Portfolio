@@ -8,11 +8,11 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface weatherAPI {
-    @GET("v2.0/forecast/hourly?&key=b921a5254a2040bab4d404182a2c1075&hours=24")
+    @GET("v2.0/current?&key=3077ba5f68df4173a844949ef398dd11")
     fun getWeather(@Query("city") city: String) : Call<weather>
 }
 class weather(val city_name : String, val data: List<forecasts>)
-class forecasts(val temp: String, val clouds: String, val timestamp_local: String)
+class forecasts(val temp: String, val clouds: String)
 
 class weatherRetriver {
     val service: weatherAPI
