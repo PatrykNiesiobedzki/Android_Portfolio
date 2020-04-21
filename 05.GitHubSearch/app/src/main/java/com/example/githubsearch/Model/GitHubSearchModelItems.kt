@@ -11,4 +11,11 @@ class GitHubSearchModelItems : Serializable{
     val created_at : String? = null
     val stargazers_count : Int = 0
     val language : String? = null
+    val owner : Owner? = null
+}
+
+class Owner : Serializable {
+    val id : Int = 0
+    val login : String? = null
+    val avatar_url : String? = null
 }

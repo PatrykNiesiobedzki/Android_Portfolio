@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.githubsearch.Model.GitHubSearchModelItems
 import com.example.githubsearch.R
+import com.example.pokedex.Other.loadUrl
 
 class ListAdapter (context: Context, resource: Int, objects: List<GitHubSearchModelItems>?) : ArrayAdapter<GitHubSearchModelItems>(context, resource, objects!!) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -18,9 +19,18 @@ class ListAdapter (context: Context, resource: Int, objects: List<GitHubSearchMo
         val avatar = repoView.findViewById<ImageView>(R.id.avatar)
         val author = repoView.findViewById<TextView>(R.id.author)
         val rating = repoView.findViewById<TextView>(R.id.rating)
+        val project = repoView.findViewById<TextView>(R.id.project)
+        val description = repoView.findViewById<TextView>(R.id.description)
+
 
         val listResults = getItem(position)
-        author.text = listResults?.name
+        author.text = listResults?.owner?.login
+        project.text = listResults?.name
+        description.text = listResults?.description
+        rating.text = listResults?.stargazers_count.toString()
+        avatar.loadUrl(listResults?.owner?.avatar_url)
         return repoView
     }
+
 }
+

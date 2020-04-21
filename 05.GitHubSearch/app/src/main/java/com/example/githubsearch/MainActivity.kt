@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         val search = findViewById<Button>(R.id.searchButton)
         search.setOnClickListener {
             val moveToSearch = Intent(getApplicationContext(), ListActivity::class.java)
+            val searchText = findViewById<EditText>(R.id.searchText)
+            moveToSearch.putExtra("searchParameter", searchText.text.toString())
             startActivity(moveToSearch)
         }
     }
