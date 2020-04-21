@@ -6,6 +6,6 @@
     <string name="gameOver">Times up. Your Score: %1$d</string>
     <string name="about">About</string>
     <string name="aboutTitle">Clicker</string>
-    <string name="aboutMessage">Created by Patryś</string>
+    <string name="aboutMessage">Created by Patryk</string>
 
 </resources>
